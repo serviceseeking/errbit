@@ -1,0 +1,1 @@
+run("ln -nfs #{shared_configs}/mongoid.yml #{release_configs}/mongoid.yml")
