@@ -1,0 +1,6 @@
+environments:
+  errbit:
+    migrate: false
+    branch: master
+    copy_exclude:
+      .git
