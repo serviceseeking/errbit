@@ -12,7 +12,7 @@
 host: errbit.serviceseeking.com.au
 
 # Enforce SSL connections
-enforce_ssl: false
+enforce_ssl: true
 
 # The email address which email notifications
 # will be sent from.
@@ -40,15 +40,15 @@ user_has_username: false
 allow_comments_with_issue_tracker: true
 
 # Setup your deploy options for capistrano.
-deployment:
-  hosts:
-    web: errbit.example.com
-    app: errbit.example.com
-    db: errbit.example.com
-  repository: http://github.com/errbit/errbit.git
-  user: deploy
-  deploy_to: /var/www/apps/errbit
-
+#deployment:
+#  hosts:
+#    web: errbit.example.com
+#    app: errbit.example.com
+#    db: errbit.example.com
+#  repository: http://github.com/errbit/errbit.git
+#  user: deploy
+#  deploy_to: /var/www/apps/errbit
+#
 # GitHub OAuth configuration
 # If you want to allow authentication via GitHub, you will need to register
 # your app at: https://github.com/settings/applications
@@ -58,9 +58,9 @@ deployment:
 # Callback URL: http://errbit.example.com/users/auth/github
 #
 # After you have registered your app, copy your Client ID and Secret key below.
-github_authentication: false
-github_client_id: 'GITHUB_CLIENT_ID'
-github_secret: 'GITHUB_SECRET'
+github_authentication: true
+github_client_id: 'ae773050635ce6c8c630'
+github_secret: '75cadaaafdab6b604fe2874c247ac001eaf4bf25'
 # GitHub Permissions to request from user
 #   ['repo']        - Allow creating issues for public and private repos.
 #   ['public_repo'] - Only allow creating issues for public repos.
@@ -71,11 +71,11 @@ github_access_scope: ['repo']
 # sendgrid will be configured by default.
 # ------------------------------------------------------------------------
 #smtp_settings:
-#  :address:              ADDRESS
-#  :domain:               DOMAIN
-#  :port:                 "25"
-#  :authentication:       :plain, :login, :cram_md5
-#  :enable_starttls_auto: true
-#  :user_name:            USERNAME
-#  :password:             PASSWORD
+  :address => "smtp.sendgrid.net"
+  :domain  => "serviceseeking.com.au"
+  :port    => 587
+  :authentication => :plain
+  :user_name  => 'daniel@serviceseeking.com.au'
+  :password  => '7&3#asdlkj'
+  
 
