@@ -58,9 +58,9 @@ allow_comments_with_issue_tracker: true
 # Callback URL: http://errbit.example.com/users/auth/github
 #
 # After you have registered your app, copy your Client ID and Secret key below.
-github_authentication: true
-github_client_id: 'ae773050635ce6c8c630'
-github_secret: '75cadaaafdab6b604fe2874c247ac001eaf4bf25'
+github_authentication: false
+github_client_id: 'GITHUB_CLIENT_ID'
+github_secret: 'GITHUB_SECRET'
 # GitHub Permissions to request from user
 #   ['repo']        - Allow creating issues for public and private repos.
 #   ['public_repo'] - Only allow creating issues for public repos.
@@ -70,12 +70,12 @@ github_access_scope: ['repo']
 # Configure SMTP settings. If you are running Errbit on Heroku,
 # sendgrid will be configured by default.
 # ------------------------------------------------------------------------
-#smtp_settings:
-  :address => "smtp.sendgrid.net"
-  :domain  => "serviceseeking.com.au"
-  :port    => 587
-  :authentication => :plain
-  :user_name  => 'daniel@serviceseeking.com.au'
-  :password  => '7&3#asdlkj'
+smtp_settings:
+  :address:        'smtp.sendgrid.net'
+  :domain:         'serviceseeking.com.au'
+  :port:           '587'
+  :authentication: :plain
+  :user_name:      'daniel@serviceseeking.com.au'
+  :password:       '7&3#asdlkj'
   
 
